@@ -18,10 +18,6 @@
 
       <v-list dense>
         <v-list-item-group color="primary">
-          <!-- <v-list-item 
-          v-for="link in links" 
-          :key="link.title"
-          > -->
           <v-list-item
  v-for="link in links"
  :key="link.title"
@@ -73,7 +69,7 @@ export default {
             drawer: false,
             links: [
             {title:"Login", icon:"mdi-lock", url:"/login"},
-            {title:"Registration", icon:"mdi-face", url:"/registration"},
+            {title:"Registration", icon:"mdi-account", url:"/registration"},
             {title:"Orders", icon:"mdi-bookmark-multiple-outline",url:"/orders"},
             {title:"New ad", icon:"mdi-note-plus-outline", url:"/new"},
             {title:"My ads", icon:"mdi-view-list-outline", url:"/list"}
