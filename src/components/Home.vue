@@ -8,7 +8,7 @@
 					v-for="ad in ads"
                     :key="ad.id"
                     :src="ad.src">
-                        <div class="ad-link">
+                        <div class="ad-link1">
                             <v-btn class="error" :to="'/ad/' + ad.id">
                             {{ ad.title }}
                             </v-btn>
@@ -88,7 +88,7 @@ export default {
 } 
 </script>
 <style scoped>
-	.ad-link {
+	.ad-link1 {
 		position:absolute;
 		bottom: 50px;
 		left:50%;
