@@ -17,6 +17,7 @@ export default new Router({
 	},
 	{
 		path:"/ad/:id",
+		props: true,
 		name:"ad",
 		component:Ad
 	},
