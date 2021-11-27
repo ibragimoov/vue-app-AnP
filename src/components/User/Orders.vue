@@ -57,5 +57,6 @@ export default {
 			console.log(order.done)
 		}
 	}
+	
 } 
 </script>
