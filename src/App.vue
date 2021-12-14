@@ -57,7 +57,7 @@
  text><v-icon left>{{ link.icon }}</v-icon>{{ link.title }}</v-btn>
 
     </v-toolbar-items>
-
+    
   </v-app-bar>
   <v-content>
     <router-view></router-view> 
