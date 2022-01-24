@@ -54,8 +54,7 @@
 			<v-layout row>
 				<v-flex xs12 sm2 offset-sm6 class="mt-5">
 
-					<v-progress-circular	
-					v-progress-circular 
+					<v-progress-circular	 
 					:size="70"
 					:width="7"
 					color="primary"
@@ -83,7 +82,7 @@ export default {
 			return this.$store.getters.ads
 		},
 		loading() {
-		return this.$store.getters.loading
+			return this.$store.getters.loading
 		}
 	}		
 }

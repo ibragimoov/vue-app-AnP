@@ -119,7 +119,7 @@ export default {
                       )
                     )
                   })
-				commit('loadAds', resultAds)
+                commit('loadAds', resultAds)
                 commit('setLoading', false)
             }  catch (error) {
                 commit('setError', error.message)

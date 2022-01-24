@@ -5,6 +5,7 @@ import vuetify from './plugins/vuetify';
 import router from './router/index';
 import store from './store';
 import fb from 'firebase';
+import 'firebase/storage'
 
 Vue.use(Router);
 Vue.config.productionTip = false;
@@ -20,6 +21,7 @@ new Vue({
 		authDomain: "vue-app-anp.firebaseapp.com",
 		projectId: "vue-app-anp",
 		storageBucket: "vue-app-anp.appspot.com",
+		databaseURL: "https://vue-app-anp-default-rtdb.firebaseio.com",
 		messagingSenderId: "85250800462",
 		appId: "1:85250800462:web:3ee93148d023a5b7e2bc1f",
 		measurementId: "G-L96VHQ7H4W",
@@ -27,7 +29,7 @@ new Vue({
 	
 	// Initialize Firebase
 	fb.initializeApp(firebaseConfig);
-	fb.getAnalytics();
+	fb.analytics();
 
 	fb.auth().onAuthStateChanged(user => {
 		if (user) {
