@@ -49,28 +49,7 @@ export default {
 				phone:"+7(978)000-00-05",
 				adId:"1",
 				done:true
-			},
-			{
-				id:"123",
-				name:"Kostya",
-				phone:"+7(978)000-00-05",
-				adId:"2",
-				done:true
-			},
-			{
-				id:"123",
-				name:"Kostya",
-				phone:"+7(978)000-00-05",
-				adId:"3",
-				done:true
-			},
-			{
-				id:"123",
-				name:"Kostya",
-				phone:"+7(978)000-00-05",
-				adId:"4",
-				done:true
-			},
+			}
 			]
 		} 	
 	},

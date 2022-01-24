@@ -92,16 +92,13 @@ export default {
 			this.$router.push("/list")
 			})
 			.catch(() => {})
-
-
 			}
 		},
-		computed: {
-			loading() {
-			return this.$store.getters.loading
-	}
-},
-
+	},
+	computed: {
+		loading() {
+		return this.$store.getters.loading
+		}
 	}
 
 
