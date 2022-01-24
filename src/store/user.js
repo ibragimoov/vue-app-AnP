@@ -48,9 +48,7 @@ export default {
         logoutUser ({commit}) {
             fb.auth().signOut()
                 commit('setUser', null)
-            }
-            
-        
+        },   
     },
 	getters: {
         user(state) {

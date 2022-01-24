@@ -22,12 +22,13 @@ new Vue({
 		storageBucket: "vue-app-anp.appspot.com",
 		messagingSenderId: "85250800462",
 		appId: "1:85250800462:web:3ee93148d023a5b7e2bc1f",
-		measurementId: "G-L96VHQ7H4W"
+		measurementId: "G-L96VHQ7H4W",
 	};
 	
 	// Initialize Firebase
 	fb.initializeApp(firebaseConfig);
 	fb.getAnalytics();
+
 	fb.auth().onAuthStateChanged(user => {
 		if (user) {
 			this.$store.dispatch('autoLoginUser', user)
