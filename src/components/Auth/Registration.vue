@@ -8,6 +8,7 @@
 			</v-toolbar>
 				<v-card-text>
 					<v-form v-model="valid" ref="form" lazy-validation>
+
 					<v-text-field
 					prepend-icon="mdi-account" 
 					name="email" 
@@ -17,6 +18,7 @@
 					:rules="emailRules" 
 					>
 					</v-text-field>
+
 					<v-text-field  
 					prepend-icon="mdi-lock" 
 					name="password" 
@@ -25,6 +27,7 @@
 					v-model="password"
 					:rules="passwordRules" 
 					></v-text-field>
+
 					<v-text-field  
 					prepend-icon="mdi-lock" 
 					name="confirm-password" 
@@ -33,8 +36,10 @@
 					v-model="confirmPassword"
 					:rules="confirmPasswordRules" 
 					></v-text-field>
+
 					</v-form> 
 				</v-card-text>
+				
 				<v-card-actions>
 					<v-spacer></v-spacer>
 					<v-btn 

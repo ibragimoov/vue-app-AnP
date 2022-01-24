@@ -20,14 +20,16 @@ export default {
         async registerUser({commit},{email, password}){
             commit('clearError')
             commit('setLoading', true)
+
             try {
-        const response = await fb.auth().createUserWithEmailAndPassword(email,password)
+                const response = await fb.auth().createUserWithEmailAndPassword(email,password)
                 commit('setUser', new User(response.user.uid))
                 commit('setLoading', false)
+                
             } catch (error) {
                 commit('setLoading', false)
                 commit('setError', error.message)
-        throw error
+                throw error
             }
         },
         async loginUser({commit},{email, password}){
@@ -40,7 +42,7 @@ export default {
                    } catch (error) {
                  commit('setLoading', false)
                 commit('setError', error.message)
-        throw error
+            throw error
             }
         },
         logoutUser ({commit}) {

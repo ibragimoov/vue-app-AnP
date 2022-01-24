@@ -18,6 +18,7 @@
 			</v-flex>
 		</v-layout> 
 		</v-container>
+
 		<v-container grid-list-lg>
 		<v-layout row wrap> 
 			<v-flex xs12 sm6 md4
@@ -48,6 +49,7 @@
 		</v-container>
     </div>
 </template>
+
 <script>
 export default {
 	computed:
@@ -63,6 +65,7 @@ export default {
 	}		
 }
 </script>
+
 <style scoped>
 	.ad-link1 {
 		position:absolute;

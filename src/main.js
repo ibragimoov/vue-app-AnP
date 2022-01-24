@@ -34,6 +34,5 @@ new Vue({
 		}
    })
   
-
 }
 }).$mount('#app');
