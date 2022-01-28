@@ -30,10 +30,19 @@
 						<v-flex xs12>
 						<v-btn 
 						class="mt-3"
-						color="warning">
+						color="warning"
+						@click="triggerUpload"
+						>
 						Upload
 						<v-icon right dark>mdi-cloud-upload</v-icon>
 						</v-btn>
+						<input 
+						ref="fileInput" 
+						type="file" 
+						style="display:none;" 
+						accept="image/*"
+						@change="onFileChange"
+						>
 						</v-flex>
 					</v-layout>
 
@@ -94,6 +103,10 @@ export default {
 			.catch(() => {})
 			}
 		},
+		triggerUpload () {
+			this.$refs.fileInput.click()
+		}, 
+
 	},
 	computed: {
 		loading() {
