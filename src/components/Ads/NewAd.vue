@@ -48,7 +48,7 @@
 
 					<v-layout row>
 						<v-flex xs12>
-						<img 		src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg" height="150" class="mt-3">
+						<img :src="imageSrc"  height="150" class="mt-3" v-if="imageSrc">
 						</v-flex>
 					</v-layout>
 
@@ -68,7 +68,7 @@
 						color="success"
 						@click="createAd"
 						:loading="loading"
-						:disabled:="!valid || loading" 
+						:disabled:="!valid || !image || loading" 
 						>Create Ad</v-btn>
 						</v-flex>
 					</v-layout>
@@ -84,12 +84,14 @@ export default {
 			valid: false,
 			title: "",
 			description: "",
-			promo: false
+			promo: false,
+			image: null,
+			imageSrc: ''
 		} 	
 	},
 	methods: {
 		createAd(){
-			if (this.$refs.form.validate()){
+			if (this.$refs.form.validate() && this.image){
 			const ad = {
 				title: this.title,
 				desc: this.description,
@@ -106,6 +108,18 @@ export default {
 		triggerUpload () {
 			this.$refs.fileInput.click()
 		}, 
+
+		onFileChange (event) {
+		const file = event.target.files[0]
+
+		const reader = new FileReader()
+		reader.onload = () => {
+		this.imageSrc = reader.result
+		}
+		reader.readAsDataURL(file)
+		this.image = file
+}
+
 
 	},
 	computed: {
