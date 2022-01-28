@@ -103,8 +103,6 @@
 
     </template>
 
-
-
   </v-app>
 
 </template>
